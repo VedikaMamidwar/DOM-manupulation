@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dom manupulation</title>
+    <style>
+        .container{
+            
+            box-shadow: 10px ;
+        }
+        .cl{
+            text-align: center;
+            height: 380px;
+            background-color:gray;
+            height: 300px;
+            width: 300px;
+            margin: 10px;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 20px;
+            border: solid 5px rgb(14, 13, 13);
+            margin-top:100px;
+            margin-left:auto;
+            margin-right: auto;
+            margin-bottom: 200px; 
+            padding-top: 50px; 
+        }
+        .ans{
+            font-size:30px;
+          
+        }
+        .btn{
+          background-color:rgb(207, 206, 206);
+        }
+
+    </style>
+  </head>
+<div class="container">
+  <body class="cl">
+    Enter Number  : <br />
+    <input type="text" id="num1" /><br /><br />
+
+    Enter Number : <br />
+    <input type="text" id="num2" /><br />
+    <br />
+
+    <p  id="answer"  class="ans"><b>Answer:</b></p>
+
+    <button type="button" onclick="calculateSum()" class="btn">Calculate Sum</button>
+    <button type="button" onclick="resetSum()" class="btn">Reset Sum</button>
+  
+    <script>
+      const inputBox1 = document.getElementById("num1");
+      const inputBox2 = document.getElementById("num2");
+      const answertText = document.getElementById("answer");
+
+      function calculateSum() {
+        const val1 = parseInt(inputBox1.value);
+        const val2 = parseInt(inputBox1.value);
+        const sum = val1 + val2;
+        answertText.innerText = `Answer : ${sum}`;
+      }
+
+      function resetSum() {
+        inputBox1.value = " ";
+        inputBox2.value = " ";
+        answertText.innerText = `Answer :`;
+      }
+    </script>
+    </div>
+  </body>
+</html>
