@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>DOM Manupulation</title>
+<style>
+    .heading{
+        text-align: center;
+    }
+    .inputbox{
+        text-align: center;
+        width: 300px;
+        height:200px;
+        justify-content: space-around;
+        background-color: rgb(145, 145, 145);
+        border-radius: 3px;
+        box-shadow: 1px 1px 2px 2px gray;
+        border:solid 2px;
+        justify-content: space-between;
+    }
+    .container{
+        text-align: center;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    
+    }
+    .std{
+        background-color:rgb(80, 80, 80);
+    }
+</style>
+
+
+</head>
+<body class="std">
+    <h1 class="heading">string comparator</h1></p>
+    <div class="container">
+  
+        <input type="text" class="inputbox" id="input1" onkeyup="compareText()">
+        <input type="text" class="inputbox" id="input2" onkeyup="compareText()">
+    
+        <p class="text-result" id="math-result-text"> 
+        </p>
+    </div>
+    <script>
+        function compareText()
+        {
+            const input1Element = document.getElementById("input1")
+            const input2Element = document.getElementById("input2")
+
+            const resultElement = document.getElementById("math-result-text")
+
+            if(input1Element.value == input2Element.value){
+                resultElement.innerText ="Matched!!!"
+            }
+            else 
+            {
+                resultElement.innerText =" Not Matched!!!" 
+            }
+             
+        }
+    </script>
+</body> 
+</html>
